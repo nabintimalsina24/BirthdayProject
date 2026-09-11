@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Happy Birthday, Kriti ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ambient floating particles layer, always present -->
+<div class="ambient-layer" id="ambientLayer" aria-hidden="true"></div>
+
+<!-- ================= OPENING SCREEN ================= -->
+<section id="openingScreen" class="opening-screen">
+  <div class="opening-arch">
+    <p class="opening-eyebrow">for you, always</p>
+    <h1 class="opening-title">A Little Surprise<br>For You, Kriti <span class="heart">❤️</span></h1>
+    <p class="opening-sub">Someone made this little corner of the internet just for you...</p>
+    <button id="openSurpriseBtn" class="btn-primary" type="button">
+      <span>Open Your Surprise Click Here</span> <span class="btn-emoji">🎁</span>
+    </button>
+  </div>
+  <div class="opening-glow"></div>
+</section>
+
+<!-- Transition overlay (hearts + confetti burst when opening) -->
+<div id="transitionOverlay" class="transition-overlay" aria-hidden="true"></div>
+
+<!-- ================= MAIN SITE ================= -->
+<main id="mainSite" class="main-site" hidden>
+
+  <!-- ===== MAIN BIRTHDAY CARD ===== -->
+  <section class="section hero-card" id="heroCard">
+    <p class="kicker">Happy Birthday</p>
+    <h2 class="section-title">Happy Birthday<br>  Kriti Sapkota <span class="heart">🎂❤️</span></h2>
+    <p class="hero-line">Today isn't just another day&nbsp;&mdash; it's the day someone truly special came into this world.</p>
+
+    <div class="photo-frame-wrap">
+      <div class="photo-arch-frame">
+        <img src="images/kriti-main.jpg" alt="Kriti Sapkota" class="hero-photo" />
+      </div>
+      <div class="sparkle-ring" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ===== PERSONAL MESSAGE ===== -->
+  <section class="section message-section" id="messageSection">
+    <p class="kicker">A few words</p>
+    <div class="message-card glass" id="messageCard">
+      <p class="typing-message" id="typingMessage"></p>
+    </div>
+  </section>
+
+  <!-- ===== SURPRISE MESSAGE ===== -->
+  <section class="section surprise-section" id="surpriseSection">
+    <button id="surpriseBtn" class="btn-secondary" type="button">
+      <span>There's Something More, Click Here...</span> <span class="btn-emoji">💌</span>
+    </button>
+    <div class="hidden-message glass" id="hiddenMessage" hidden>
+      <p>Some people make ordinary days feel special just by being there. You're one of those people. ❤️</p>
+    </div>
+  </section>
+
+  <!-- ===== MAKE A WISH / CAKE ===== -->
+  <section class="section cake-section" id="cakeSection">
+    <p class="kicker">A moment for you</p>
+    <h2 class="section-title small">Make a Wish, Kriti <span class="heart">✨</span></h2>
+
+    <div class="cake-wrap">
+      <svg id="cakeSvg" class="cake-svg" viewBox="0 0 260 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <!-- plate -->
+        <ellipse cx="130" cy="205" rx="95" ry="10" fill="#3a2030" opacity="0.6"/>
+        <!-- bottom tier -->
+        <rect x="45" y="140" width="170" height="55" rx="10" fill="#7a3b4d"/>
+        <rect x="45" y="140" width="170" height="14" rx="7" fill="#a5566c"/>
+        <!-- top tier -->
+        <rect x="75" y="95" width="110" height="50" rx="10" fill="#8c4a5c"/>
+        <rect x="75" y="95" width="110" height="14" rx="7" fill="#b56478"/>
+        <!-- drips -->
+        <circle cx="95" cy="150" r="6" fill="#e6b8c2"/>
+        <circle cx="130" cy="152" r="5" fill="#e6b8c2"/>
+        <circle cx="165" cy="150" r="6" fill="#e6b8c2"/>
+        <circle cx="115" cy="106" r="5" fill="#f2d3da"/>
+        <circle cx="150" cy="106" r="5" fill="#f2d3da"/>
+        <!-- candles -->
+        <g class="candle" data-candle="1">
+          <rect x="95" y="70" width="6" height="26" rx="2" fill="#f4ece3"/>
+          <g class="flame-group">
+            <ellipse class="flame" cx="98" cy="64" rx="5" ry="9" fill="#f6b93b"/>
+            <ellipse class="flame-core" cx="98" cy="67" rx="2.4" ry="4.5" fill="#fff3d1"/>
+          </g>
+        </g>
+        <g class="candle" data-candle="2">
+          <rect x="127" y="60" width="6" height="36" rx="2" fill="#f4ece3"/>
+          <g class="flame-group">
+            <ellipse class="flame" cx="130" cy="54" rx="5" ry="9" fill="#f6b93b"/>
+            <ellipse class="flame-core" cx="130" cy="57" rx="2.4" ry="4.5" fill="#fff3d1"/>
+          </g>
+        </g>
+        <g class="candle" data-candle="3">
+          <rect x="159" y="70" width="6" height="26" rx="2" fill="#f4ece3"/>
+          <g class="flame-group">
+            <ellipse class="flame" cx="162" cy="64" rx="5" ry="9" fill="#f6b93b"/>
+            <ellipse class="flame-core" cx="162" cy="67" rx="2.4" ry="4.5" fill="#fff3d1"/>
+          </g>
+        </g>
+      </svg>
+    </div>
+
+    <button id="wishBtn" class="btn-primary" type="button">
+      <span>Make a Wish</span> <span class="btn-emoji">🎂✨</span>
+    </button>
+    <p class="wish-result" id="wishResult" hidden>May your wish come true. ❤️✨</p>
+  </section>
+
+  <!-- ===== MEMORY / GALLERY ===== -->
+  <section class="section memory-section" id="memorySection">
+    <p class="kicker">A little memory</p>
+    <h2 class="section-title small">A Little Memory <span class="heart">❤️</span></h2>
+    <div class="memory-grid">
+      <div class="memory-frame">
+        <img src="images/kriti-2.jpg" alt="Kriti Sapkota" loading="lazy" />
+      </div>
+      <div class="memory-frame">
+        <img src="images/kriti-3.jpg" alt="Kriti Sapkota" loading="lazy" />
+      </div>
+    </div>
+    <p class="memory-caption">A beautiful person deserves a beautiful day. ✨</p>
+  </section>
+
+  <!-- ===== MUSIC PLAYER ===== -->
+  <section class="section music-section" id="musicSection">
+    <div class="music-card glass">
+      <button id="musicBtn" class="music-btn" type="button" aria-pressed="false">
+        <span class="music-icon" id="musicIcon">▶</span>
+        <span id="musicLabel">Play Birthday Music</span>
+        <span class="btn-emoji">🎵</span>
+      </button>
+      <div class="music-bars" id="musicBars" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <audio id="bgMusic" loop preload="none">
+      <source src="birthday-music.mp3" type="audio/mpeg">
+    </audio>
+  </section>
+
+  <!-- ===== FINAL SURPRISE ===== -->
+  <section class="section final-section" id="finalSection">
+    <div class="final-heart" aria-hidden="true">❤️</div>
+    <p class="kicker">Once again...</p>
+    <h2 class="section-title">Happy Birthday,<br>Kriti Sapkota <span class="heart">❤️🎂</span></h2>
+    <p class="hero-line">May your life always be filled with love, happiness and beautiful moments. ✨</p>
+    <button id="finalBtn" class="btn-primary" type="button">
+      <span>One Last Surprise</span> <span class="btn-emoji">💖</span>
+    </button>
+    <p class="final-line" id="finalLine" hidden>You deserve the best. Always. ❤️</p>
+  </section>
+
+  <footer class="site-footer">
+    <p>made with ❤️ for Kriti</p>
+  </footer>
+
+</main>
+
+<!-- Full-screen final overlay -->
+<div id="finalOverlay" class="final-overlay" aria-hidden="true"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
